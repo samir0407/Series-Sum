@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class SeriesSum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Number of cases: ");
+        int cases = sc.nextInt();
+
+        for (int i = 1; i <= cases; i++) {
+            System.out.print("Case " + i + ": Enter n" + i + ": ");
+            int n = sc.nextInt();
+
+            // Series and sum output in one loop
+            int sum = 0;
+            for (int j = 1; j <= n; j++) {
+                System.out.print(j + (j < n ? "+" : ""));
+                sum += j;
+            }
+            System.out.println(" = " + sum);
+        }
+        sc.close();
+    }
+}
